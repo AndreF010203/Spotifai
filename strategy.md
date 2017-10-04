@@ -16,4 +16,6 @@ in each row a playlist and the tags of the tracks in the playlist with the count
 
 **Popularity ranking**
 
+for each track, the number of appearence of the tracks in the playlists and the playcount
+
 for each tag, the song with that tag appearing in most playlists
