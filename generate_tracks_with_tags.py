@@ -13,5 +13,9 @@ for t in tracksfinal:
         for x in modtags:
             tempvar.append(x)
         templist.append(tempvar)
+    else:
+        for x in range(5):
+            tempvar.append(0)
+        templist.append(tempvar)
 myarr=array(templist)
 save("tracks_with_tags.npy",myarr)
