@@ -20,6 +20,9 @@ array([
 ### ordered_tracks.npy
 (*all 100k IDtracks ordered by occurrency count*)
 
+### targetTracksOrdered.npy
+(*only target tracks ID ordered by occurrency count*)
+
 array([IDtrack1, IDtrack2, ... ])
 
 ### tracks_with_tags.npy
@@ -100,7 +103,7 @@ matrix([
 ... ])
 
 ### playlists_with_tags.npz
-(*all 10k playlists ordered as in target_playlists.csv, bincount of all tags from 0 to 276614, without IDplaylist*)
+(*10k target playlists ordered as in target_playlists.csv, bincount of all tags from 0 to 276614, without IDplaylist*)
 
 matrix([
 
@@ -120,3 +123,57 @@ matrix([
 [bincountTag1, bincountTag2, ... ],
 
 ... ])
+
+### all_playlists_with_tracks.npz
+(*with playlist id in first column, all playlist from final, ordered by ascendent playlistID*)
+
+matrix([
+
+[playlistID1, track1.1, track1.2, ... ],
+
+[playlistID2, track2.1, track2.2, ... ],
+
+... ])
+
+### all_playlists_with_tags.npz
+(*no playlist id, all playlist from final, ordered by ascendent playlistID*)
+
+matrix([
+
+[tag1.1, tag1.2, ... ],
+
+[tag2.1, tag2.2, ... ],
+
+... ])
+
+### all_playlists_with_artist.npz
+(*no playlist id, all playlist from final, ordered by ascendent playlistID*)
+
+matrix([
+
+[artist1.1, artist1.2, ... ],
+
+[artist2.1, artist2.2, ... ],
+
+... ])
+
+### uniqueArtists_NeededToIndexThe_ArtistReducedMatrices.npy
+
+array([ artistID1, artistID2, ... ])
+
+### targetPlaylistArtistReduced.npz
+(*10k target playlists ordered as in target_playlists.csv, bincount of all present artists, ATTENZIONE la posizione non corrisponde con l'id dell'artista, usare il file uniqueArtists_NeededToIndexThe_ArtistReducedMatrices.npy*)
+
+matrix([
+
+[bincountArtist1, bincountArtist2, ... ],
+
+[bincountArtist1, bincountArtist2, ... ],
+
+... ])
+
+### allTracksArtistReduced.npz
+(*100k tracks without ID, with a 1 in the column of the artist, tracks ordered as in tracks_final*)
+
+### targetTracksArtistReduced.npz
+(*only target tracks without ID, with a 1 in the column of the artist, tracks ordered by occurrency popularity*)
