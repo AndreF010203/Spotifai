@@ -177,3 +177,14 @@ matrix([
 
 ### targetTracksArtistReduced.npz
 (*only target tracks without ID, with a 1 in the column of the artist, tracks ordered by occurrency popularity*)
+
+### artists_with_tracksID_ordered_by_occurrencies.npz
+(*each row is dedicated to one artist and contains the tracks of that artist ordered by occurrencies, the artists are in order of ID as in uniqueArtists*)
+
+matrix([
+
+[track1.1, track1.2, ... ],
+
+[track2.1, track2.2, ... ],
+
+... ])
